@@ -21,7 +21,7 @@
 
 # 📝 Overview
 
--   TODO
+This WordPress plugin provides additional user engagement on your WordPress site. Users can pick the right answers from your given options in the backend.
 
 ## Cloning the project
 
