@@ -1,11 +1,11 @@
 {
-    "name": "are-you-paying-attention",
+    "name": "quiz",
     "version": "1.0.0",
     "description": "",
-    "main": "test.js",
+    "main": "index.jsx",
     "scripts": {
-        "build": "wp-scripts build",
-        "start": "wp-scripts start",
+        "build": "wp-scripts build src/index.jsx src/front-end.jsx",
+        "start": "wp-scripts start src/index.jsx src/front-end.jsx",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [],

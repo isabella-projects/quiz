@@ -22,12 +22,12 @@ class Quiz
 
         wp_register_style(
             'quiz_edit_css',
-            plugin_dir_url(__FILE__) . 'build/index.css',
+            plugin_dir_url(__FILE__) . 'build/index.jsx.css',
         );
 
         wp_register_script(
             'quiz_block_type',
-            plugin_dir_url(__FILE__) . 'build/index.js',
+            plugin_dir_url(__FILE__) . 'build/index.jsx.js',
             [
                 'wp-blocks',
                 'wp-element',
@@ -44,8 +44,13 @@ class Quiz
 
     public function renderQuiz($attributes)
     {
+        wp_enqueue_script('attentionFrontend', plugin_dir_url(__FILE__) . 'build/front-end.jsx.js', [
+            'wp-element'
+        ], '1.0', true);
+        wp_enqueue_style('attentionFrontendStyle', plugin_dir_url(__FILE__) . 'build/front-end.jsx.css');
+
         ob_start();
-        include_once 'templates/render.template.php';
+        include 'templates/render.template.php';
         $output = ob_get_clean();
         return $output;
     }
