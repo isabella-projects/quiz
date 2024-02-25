@@ -18,13 +18,20 @@
     .attention-delete {
         background-color: #f83939;
         border-radius: 3px;
-        color: #3a3636;
+        color: #ffffff;
         font-weight: 500;
         position: relative;
         top: -5px;
+        text-decoration: none;
 
         &:hover {
             background-color: #e21e1e;
+        }
+
+        svg {
+            position: relative;
+            top: 1px;
+            margin: 0 3px 0 -2px;
         }
     }
 }
